@@ -1,4 +1,3 @@
-
 This is mainly a wrapper for the Facebook PHP SDK class.
 
 You can also use it to include the Facebook JS SDK on your pages, and easily set Open Graph tags.
@@ -77,7 +76,7 @@ Render Facebook Social Plugins using helper Yii widgets:
 
 <?php $this->widget('ext.yii-facebook-opengraph.plugins.LikeButton', array(
    //'href' => 'YOUR_URL', // if omitted Facebook will use the OG meta tag
-   'show-faces'=>true,
+   'show_faces'=>true,
    'send' => true
 )); ?>
 
