@@ -63,6 +63,11 @@ class SFacebook extends CApplicationComponent
      * @var string JavaScript to run after the Facebook JS library loads asynchronously
      */
     private $callbackScripts = '';
+    
+    /**
+     * @var bool whether or not to use frictionlessRequests on request dialogs
+     */
+     public $frictionlessRequests = false;
 
     /**
      * @var bool turn on or off the Facebook JS
@@ -241,6 +246,7 @@ class SFacebook extends CApplicationComponent
                     'cookie' => $this->cookie, // enable cookies to allow the server to access the session
                     'xfbml' => $this->xfbml, // parse XFBML
                     'oauth' => $this->oauth, // enable OAuth 2.0
+                    'frictionlessRequests' => $this->frictionlessRequests, // Enable frictionless requests on requests dialog
                     // TODO follow up on this bug: http://developers.facebook.com/bugs/258868920826496
                     // IE won't login with this channelUrl line uncommented
                     //'channelUrl' => $this->getChannelUrl(), // Channel File
